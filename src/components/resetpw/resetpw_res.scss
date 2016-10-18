@@ -6,19 +6,37 @@
   .container.rs {
     margin-bottom: 0;
     height: calc(100vh - 45px);
-    padding-top: 15vh;
+    padding-top: 10vh;
 
     .form-caption-wrapper {
       text-align: center;
       color: #947216;
       margin-bottom: 8vh;
       .form-caption {
-        font-size: 2rem;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
       }
 
       .form-sm-caption {
         font-size: 1rem;
+        font-weight: 300;
+      }
+      .divider{
+        width: 30%;
+        margin: 20px auto;
+        background-color: #947216;
+      }
+
+      .after-form{
+        margin-top: 20px;
+        color: #66087c;
         font-weight: 400;
+        .after-email{
+          a{
+            font-weight: 400;
+            color: #66087c;
+          }
+        }
       }
     }
   }
@@ -72,6 +90,14 @@
     :-moz-placeholder { /* Firefox 18- */
       font-size: 0.8rem;
       font-weight: 300;
+    }
+  }
+
+  .lock-container{
+    img{
+      display: block;
+      width: 100px;
+      margin: 0 auto;
     }
   }
 }
