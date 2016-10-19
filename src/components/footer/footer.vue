@@ -14,7 +14,7 @@
               ins: require('../../resource/instagram.png'),
               twit:require('../../resource/twitter.png'),
               comingSoon: require('../../resource/coming_soon.png'),
-              isResetps: this.$route.path.includes('/resetpassword') ? true : false,
+              isRegular: this.$route.path.includes('/resetpassword') || this.$route.path.includes('/confirm')  ? false : true,
           }
       }
     }

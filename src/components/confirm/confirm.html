@@ -1,0 +1,43 @@
+<div id="confirm">
+  <div class="container">
+    <div class="mail-container" v-if="success">
+      <img :src="mail">
+    </div>
+
+    <div class="mail-container" v-if="!success">
+      <img :src="mailerror">
+    </div>
+
+    <div class="form-caption-wrapper suc" >
+      <div class="form-caption" v-if="success">
+        Hi {{username}}
+      </div>
+      <div class="form-sm-caption" v-if="success">
+        Thank you for confirming your email address!
+      </div>
+
+      <div class="form-caption" v-if="!success">
+        Sorry, something went wrong.
+      </div>
+
+      <div class="form-sm-caption" v-if="!success">
+        Please try again later.
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-sm-caption">
+        See you within the Dream Dog app.
+      </div>
+
+      <div class="after-form">
+        <div>THE DREAM DOG TEAM</div>
+        <div class='after-email'>
+          <a href="http://www.dreamdogapp.com" target="_blank">www.dreamdogapp.com</a>
+        </div>
+        <div class='after-email'>
+          <a href="https://twitter.com/dreamdogapp" target="_blank">Twitter: @DreamDogApp</a>
+        </div>
+      </div>
+  </div>
+</div>

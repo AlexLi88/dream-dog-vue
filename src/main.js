@@ -46,6 +46,7 @@ var app = Vue.extend({
       require('./components/faq/faq.scss');
       require('./components/pp/pp.scss');
       require('./components/resetpw/resetpw.scss');
+      require('./components/confirm/confirm.scss');
     }
 
   },

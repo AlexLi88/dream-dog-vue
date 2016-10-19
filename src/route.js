@@ -30,6 +30,9 @@ export default (App) => {
 
     '/resetpassword':{
       component: require('./components/resetpw/resetpw.vue')
+    },
+    '/confirm':{
+      component: require('./components/confirm/confirm.vue')
     }
   })
   router.start(App, '#app')

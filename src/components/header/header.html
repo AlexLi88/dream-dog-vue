@@ -1,4 +1,4 @@
-<div id="header" v-if ="!isResetps">
+<div id="header" v-if ="isRegular">
   <div id="caption" v-link="{ path: '/' }">
     <img :src="logo" >
   </div>
@@ -15,9 +15,15 @@
   <div id="rsps-header-container">
     <div id="rsps-caption-left">
       <img :src="slogo">
-      <div id="caption-text">
+      <div id="caption-text" v-if="currPage == 'resetps' ">
         Password Reset
       </div>
+
+      <div id="caption-text" v-if="currPage == 'confirm' ">
+        Confirmation
+      </div>
+
+
     </div>
     <div id="rsps-caption-right" class="right">
       <div id="select-lan">
