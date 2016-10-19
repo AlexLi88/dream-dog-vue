@@ -1,53 +1,51 @@
-#confirm {
-  background-color: #f7d339;
-}
+.non-res {
+  #confirm {
+    background-color: #f7d339;
+  }
 
+  .container.confirm {
+    margin-bottom: 0;
+    height: calc(100vh - 45px);
+    padding-top: 15vh;
 
-.container{
-  margin-bottom: 0;
-  height: calc(100vh - 45px);
-  padding-top: 15vh;
+    .form-caption-wrapper {
+      text-align: center;
+      color: #947216;
+      margin-bottom: 8vh;
+      .form-caption {
+        font-size: 1.7rem;
+        margin-bottom: 5px;
+      }
 
-  .form-caption-wrapper {
-    text-align: center;
-    color: #947216;
-    margin-bottom: 8vh;
-    .form-caption {
-      font-size: 1.7rem;
-      margin-bottom: 5px;
-    }
+      .form-sm-caption {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .divider {
+        width: 10%;
+        margin: 20px auto;
+        background-color: #947216;
+      }
 
-    .form-sm-caption {
-      font-size: 1rem;
-      font-weight: 300;
-    }
-    .divider{
-      width: 10%;
-      margin: 20px auto;
-      background-color: #947216;
-    }
-
-    .after-form{
-      margin-top: 20px;
-      color: #66087c;
-      font-weight: 400;
-      .after-email{
-        a{
-          font-weight: 400;
-          color: #66087c;
+      .after-form {
+        margin-top: 20px;
+        color: #66087c;
+        font-weight: 400;
+        .after-email {
+          a {
+            font-weight: 400;
+            color: #66087c;
+          }
         }
       }
     }
-  }
 
-
-
-  .mail-container{
-    img{
-      display: block;
-      width: 200px;
-      margin: 0 auto;
+    .mail-container {
+      img {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+      }
     }
   }
-
 }

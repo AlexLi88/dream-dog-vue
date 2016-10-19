@@ -6,7 +6,7 @@
         mail: require('../../resource/mail_icon.png'),
         mailerror: require('../../resource/mail_icon_error.png'),
         username: '',
-        uuid: '07f7a22b-1905-49a5-a3cc-8a05f6da2064',
+        uuid: this.$route.query.key,
         success: true
       }
     },
