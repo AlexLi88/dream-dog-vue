@@ -1,0 +1,26 @@
+<div class="vNav">
+  <ul class="vNav">
+    <li id="introduction">
+      <div class="title">Introduction</div>
+      <a class="active" v-on:click="toPosition('introduction')" v-on:mouseover="showTitle($event)" v-on:mouseleave="hideTitle($event)" >
+      </a>
+    </li>
+    <li>
+      <div class="title">Shelter</div>
+      <a v-on:click="toPosition('shelter')" v-on:mouseover="showTitle($event)" v-on:mouseleave="hideTitle($event)" >
+
+      </a>
+    </li>
+    <li>
+      <div class="title">Feature</div>
+      <a v-on:click="toPosition('feature')" v-on:mouseover="showTitle($event)" v-on:mouseleave="hideTitle($event)" >
+
+      </a>
+    </li>
+    <li >
+      <div class="title">Contact</div>
+      <a v-on:click="toPosition('contact')" v-on:mouseover="showTitle($event)" v-on:mouseleave="hideTitle($event)" >
+      </a>
+    </li>
+  </ul>
+</div>
