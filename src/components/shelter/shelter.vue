@@ -1,6 +1,12 @@
 <script>
+  import { swiper, swiperSlide, swiperPlugins } from 'vue-awesome-swiper'
     export default {
+
         template: require('./shelter.html'),
+        components:{
+          swiper,
+          swiperSlide
+        },
         validators: {
           email: function (val) {
             return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(val)
@@ -88,6 +94,11 @@
         },
 
         ready: function () {
+          if((/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+            this.isPhone = true;
+          }else{
+            this.isPhone = false;
+          }
           $(".org_phone").keydown(function (e) {
             // Allow: backspace, delete, tab, escape, enter and .
             if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
@@ -111,6 +122,7 @@
 
         data: function () {
             return {
+              isPhone: false,
               validOrg: false,
               validName: false,
               validEmail: false,
@@ -122,6 +134,20 @@
               org_phone1:'',
               org_phone2:'',
               org_web:'',
+              swiperOption: {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                spaceBetween: 30
+              },
+              swiperOption2: {
+                pagination: '.swiper-pagination',
+                slidesPerView: 3,
+                paginationClickable: true,
+                spaceBetween: 30,
+                freeMode: true
+              },
               dogs:[
 
                 {
@@ -133,34 +159,35 @@
                   url:'http://www.huntingtonny.gov/content/13749/13839/16437/16539/default.aspx'
                 },{
 
-                  name:'Charlie',
-                  pic:'https://petstablished-app-beta.s3.amazonaws.com/uploads/image/image/99932/test_2F899f5b3e-85f5-4a47-b502-5f0b90cd97e3_2Ftest_image.jpg',
+                  name:'Annabelle',
+                  pic:'https://petstablished-app-beta.s3.amazonaws.com/uploads/image/image/105470/test_2F7ac0f016-beda-49d9-a1ec-1ef0e20ca69a_2Ftest_image.jpg',
                   addr:'White River Animal Rescue, White River Junction, VT ',
-                  intro:`Charlie is 25 lbs. Charlie and his litter mates are normal happy 10-week old puppies.`,
+                  intro:`Annabelle is a happy girl with a lot of exuberance! She would love an active home that could give her cookies and lots of play time! Enjoy playing with dogs but no kitties.`,
                   url:' http://www.whiteriveranimalrescue.org/Adoptable.html'
 
                 },{
 
-                  name:'Kelle',
-                  pic:'https://www.adorehouston.org/wp-content/uploads/2016/05/IMG_3611.jpg',
-                  addr:'ADORE Houston Boston, MA',
-                  intro:'Hey guys. I am Kelle and I am a 4 year old Border Collie mix. I am an awesome little girl that enjoys being the official ADORE greeter at adoption events because I love being the center of attention.',
-                  url:'https://www.adorehouston.org/portfolio/kelle-2/'
+                  name:'Peanut',
+                  pic:'https://www.adorehouston.org/wp-content/uploads/2016/05/IMG_5558-535x623.jpg',
+                  addr:'Adore Houston, Houston, TX',
+                  intro:'Adorable, charming, exuberant. These are just a few words that describe me, the incomparable Peanut. I am a simple dog with a beautiful face trying to find my forever home.',
+                  url:'https://www.adorehouston.org/portfolio/peanut-2/'
 
                 },
                 {
 
-                  name:'Benni',
-                  pic:'https://drpem3xzef3kf.cloudfront.net/photos/pets/35445937/3/?bust=1466522077&width=632&no_scale_up=1',
-                  addr:'ADORE Houston Boston, MA',
-                  intro:'Hello my name is Benni I am 2 years old, and the sweetest thing you will meet.',
-                  url:'https://www.adorehouston.org/portfolio/benni/'
+                  name:'Gizmo',
+                  pic:'https://www.adorehouston.org/wp-content/uploads/2016/05/IMG_5099-535x750.jpg',
+                  addr:'Adore Houston, Houston, TX',
+                  intro:'Hello my name is Gizmo I am 2 years old. You will never catch him without a smile.',
+                  url:'https://www.adorehouston.org/portfolio/gizmo-2/'
 
                 }
               ],
 
                 backgroundImage: require('../../resource/adopt_header.png'),
                 formDog: require('../../resource/form_element.png'),
+                formDog2: require('../../resource/sign_up.png'),
                 shelters: [
                     {
                         hover: false,

@@ -8,11 +8,10 @@
     background-image: url('../../resource/background_feature.jpg');
 
     #caption {
-
+      margin: 1em 0;
       font-size: 2em;
       text-align: center;
-      color: #1d0729;
-
+      color: #66087c;
     }
 
     #mockup_container {
@@ -20,42 +19,48 @@
       margin-top: 1em;
       max-width: 1400px;
       margin: auto;
+      .swiper-pagination-bullet-active{
+        background-color: #ecd034;
+      }
+      .swiper-button-prev{
+        background-image: url('../../resource/arrow.png');
+      }
 
+      .swiper-button-next{
+        background-image: url('../../resource/arrow_2.png');
+      }
       .one_mock {
 
         display: inline-block;
         width: 100%;
-        padding: 2.5em;
         background: transparent;
-        margin-left: 0.8%;
-        box-shadow: none;
         vertical-align: top;
         opacity: 1;
-        animation-duration: 0.5s;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        padding-top: 1em;
+        transform: translateY(-20px);
 
 
         .card-image{
           position: relative;
           margin-top: -50px;
+          img{
+            width: 55%;
+            margin: 70px 22.5%;
+          }
         }
 
         .card-content{
           position: relative;
-          margin-top: -60px;
+          margin-top: -70px;
+          transform: translateY(-10px);
         }
 
         .caption {
-
           font-size: 1.3em;
           text-align: center;
           font-weight: bold;
           line-height: 1em;
           padding: 1em 0;
           color: #66077b;
-          text-transform: capitalize;
           padding-bottom: 0.5em;
 
         }
@@ -68,15 +73,6 @@
         }
       }
 
-    }
-    #mockup_container > div:nth-child(3) > div.card-content{
-      top: 0px;
-      margin-top: 0;
-    }
-
-    #mockup_container > div:nth-child(3) >div.card-image{
-
-      margin-top:0px !important;
     }
 
   }

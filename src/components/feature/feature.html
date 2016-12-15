@@ -1,6 +1,6 @@
 <div id="feature" class="">
     <div id="caption">Our Features</div>
-    <div id="mockup_container">
+    <div id="mockup_container" v-if="!isPhone">
         <div class="card one_mock" v-for="mock in feature_list">
             <div class="card-image">
                 <img :src=mock.img>
@@ -10,5 +10,21 @@
                 <div class="detail">{{mock.detail}}</div>
             </div>
         </div>
+    </div>
+    <div id="mockup_container" v-if="isPhone">
+      <swiper :options="swiperOption">
+        <swiper-slide v-for="mock in feature_list" class="one_mock">
+          <div class="card-image">
+            <img :src=mock.img_phone>
+          </div>
+          <div class="card-content">
+            <div class="caption">{{mock.caption}}</div>
+            <div class="detail">{{mock.detail}}</div>
+          </div>
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
     </div>
 </div>

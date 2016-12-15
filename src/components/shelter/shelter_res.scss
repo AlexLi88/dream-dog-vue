@@ -1,21 +1,29 @@
 .res {
   #shelter {
-
-    padding: 5vh 0;
     padding-bottom: 0;
     background: white;
-    #main_caption {
 
+    #video-wrapper{
+      width: 100%;
+      margin: 0 10%;
+      iframe{
+        width: 80%;
+        height: 80vh;
+      }
+    }
+
+    #main_caption {
       font-size: 2em;
       text-align: center;
-      color: #1d0729;
+      color: #66087c;
+      margin: 1em 20% 0.5em 20%;
     }
 
     #main_caption_sm {
       width: 85%;
       margin: auto;
       img {
-        width: 100%;
+        max-width: 160px;
       }
     }
     #org_contact {
@@ -39,10 +47,20 @@
       }
       form {
         margin: auto;
-        width: 80%;
+        width: 90%;
+        label{
+          font-size: 1em;
+        }
+        .org_phone{
+          width: 24%!important;
+          display: inline-block !important;
+        }
         input[type=text] {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
           display: block;
-          width: 89%;
+          width: 100%;
           margin: auto;
           margin-top: 1vh;
           border: 1px solid #b7b49f;
@@ -69,63 +87,78 @@
         }
       }
     }
-    #shelter_icon {
-
-      margin: auto;
-      padding: 2em 0em;
-      //-vendor-animation-delay: 2s;
-
-      .s_icon {
-
-        display: inline-block;
-        width: 28%;
-        margin-left: 4%;
-        cursor: pointer;
-        vertical-align: middle;
-        margin-bottom: 1em;
-        img {
-
-          width: 100%;
+    .icon-slider {
+      .icon {
+        max-width: 50vw;
+        margin: auto;
+        a {
+          width: 80vw;
+          height: 170px;
+          margin: auto;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+          img {
+            max-width: 170px;
+            width: 100%;
+            vertical-align: middle;
+          }
         }
       }
+      .swiper-container {
+        height: 180px;
+      }
     }
+    .swiper-pagination-bullets {
+      bottom: 0px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #ecd034;
+    }
+    .swiper-button-prev {
+      background-image: url('../../resource/arrow.png');
+    }
+
+    .swiper-button-next {
+      background-image: url('../../resource/arrow_2.png');
+    }
+
+
 
 
     #recent_adopt{
 
       margin-top: 1em;
-      background: #fde46b;
       min-height: 30vh;
       position: relative;
       //position: absolute;
       //width: 100vw;
       //bottom: 0;
+      #caption{
+        text-align: center;
+        background-color: #14cede;
+        padding:1vw 20%;
+        color: white;
+        font-size: 2em;
+      }
+      #swiper-container{
+        .swiper-container{
+          background-color: #fde46b;
+        }
+        .swiper-slide{
 
-      .container{
-
-        padding: 2em 0em;
-        width:80%;
+          width: 100vw !important;
+        }
         .one_d{
-          background-color: transparent;
-          display: inline-block;
-          width: 100%;
-          margin-top: 5%;
-          height: 300px;
-          //margin-left: 0.5%;
-          vertical-align: top;
-          position: relative;
-          text-align: left;
-          cursor: pointer;
-
+          height:100%;
           .card{
             position: relative;
-            height: 300px;
+            height: 400px;
             margin: 0;
             background: transparent;
             background-size: cover !important;
             box-shadow: none;
           }
-
           .dog_info{
             display: none;
             position: absolute;
@@ -153,8 +186,9 @@
               padding-bottom: 0.2em;
               font-weight: bold;
 
-
-
+            }
+            .des{
+              padding-right: 10px;
             }
             .link{
 
@@ -176,76 +210,46 @@
               display: inline-block;
             }
           }
-          .card-image{
-
-            height:300px;
-            overflow: hidden;
-
-            a{
-              //display: inline-block;
-              cursor: pointer;
-            }
-          }
-          .card-content{
-
-            font-size: 0.8em;
-          }
-
         }
       }
 
-      #caption{
 
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-size: contain;
-        background-image: url('../../resource/adopt_header.png');
-        background-repeat: no-repeat;
-        max-width: 700px;
-        //font-size: 2em;
-        padding-top: 2vw;
-        padding-bottom: 15px;
-        color: white;
-        font-size: 1.3vw;
-        top: -1em;
-      }
+
     }
     //min-height:80vh;
   }
 
-  @media only screen and (max-width: 700px) { //for nexus 6p 5x iphone 6+
-    #recent_adopt #caption {
-      min-width: 500px !important;
-      padding-left: 7% !important;
-      font-size: 1.5em !important;
-    }
-  }
-
-  @media only screen and (max-width: 440px) { //for nexus 6p 5x iphone 6+
-    #recent_adopt #caption {
-      min-width: 310px !important;
-      padding-left: 5% !important;
-      font-size: 1em !important;
-    }
-  }
-
-  @media only screen and (max-width: 400px) { //for S5  iphone 6
-    #recent_adopt #caption {
-      min-width: 280px !important;
-      padding-left: 20px !important;
-      font-size: 0.9em !important;
-    }
-  }
-
-  @media only screen and (max-width: 350px) { //iphone 5
-    #recent_adopt #caption {
-      min-width: 250px !important;
-      padding-left: 18px !important;
-      font-size: 0.8em !important;
-    }
-  }
+  //@media only screen and (max-width: 700px) { //for nexus 6p 5x iphone 6+
+  //  #recent_adopt #caption {
+  //    min-width: 500px !important;
+  //    padding-left: 7% !important;
+  //    font-size: 1.5em !important;
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 440px) { //for nexus 6p 5x iphone 6+
+  //  #recent_adopt #caption {
+  //    min-width: 310px !important;
+  //    padding-left: 5% !important;
+  //    font-size: 1em !important;
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 400px) { //for S5  iphone 6
+  //  #recent_adopt #caption {
+  //    min-width: 280px !important;
+  //    padding-left: 20px !important;
+  //    font-size: 0.9em !important;
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: 350px) { //iphone 5
+  //  #recent_adopt #caption {
+  //    min-width: 250px !important;
+  //    padding-left: 18px !important;
+  //    font-size: 0.8em !important;
+  //  }
+  //}
 }
 
 

@@ -12,7 +12,7 @@
     },
     ready(){
       var self = this;
-      this.$http.get(`http://service.dreamdogapp.com:8080/api/confirm/${this.uuid}`).then((response)=>{
+      this.$http.get(`http://service.dreamdogapp.com/api/confirm/${this.uuid}`).then((response)=>{
         console.log(response);
         if(response.status == 200){
           if(response.data.result == 'OK'){

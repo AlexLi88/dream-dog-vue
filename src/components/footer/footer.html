@@ -1,16 +1,22 @@
 <div id="footer" v-if="isRegular">
-    <div class="footer-container">
+    <div class="footer-container" v-if="!isPhone">
         <div class="left-container">
           <div id="dog-logo">
             <img :src="footerimg"/>
           </div><!--
 
             --><div class="download">
-              <img class="cs" :src="comingSoon"/>
-              <img class="store" :src="appleStore"/>
-              <img class="store" :src="gooogleStore"/>
+                <div id="find-dog">Find Your Dream Dog !</div>
+              <a href="https://itunes.apple.com/us/app/dream-dog/id1152725638?mt=8" target="_blank"><img class="store" :src="appleStore"/></a>
+              <a href="https://play.google.com/store/apps/details?id=com.dreamdogapp.android&hl=en" target="_blank"><img class="store" :src="gooogleStore"/></a>
             </div>
         </div><!--
+
+        --><div class="mid-container">
+              <div class="tos">
+                <a v-link="{ path: 'tos' }">TERMS OF SERVICE</a><a v-link="{ path: 'pp' }">PRIVACY POLICY</a>
+              </div>
+          </div><!--
 
 
         --><div class="right-container">
@@ -24,9 +30,47 @@
                 <a href="https://www.facebook.com/dreamdogapp/" target="_blank"><img class="social-icon" :src="fb" /></a>
                 <a href="https://www.instagram.com/dreamdogapp/" target="_blank"><img class="social-icon" :src="ins" /></a>
             </div>
-            <div class="tos">
-              <a v-link="{ path: 'tos' }">Terms of Service</a><a v-link="{ path: 'pp' }">Privacy Policy</a>
-            </div>
         </div>
+    </div>
+
+    <div class="footer-container" v-if="isPhone">
+      <div id="footer-top">
+        <div id="dog-logo">
+          <img :src="footerimg"/>
+          <div>Find Your Dream Dog !</div>
+          <div class="download">
+            <a href="https://itunes.apple.com/us/app/dream-dog/id1152725638?mt=8" target="_blank"><img class="store" :src="appleStore"/></a>
+          </div>
+          <div class="download">
+            <a href="https://play.google.com/store/apps/details?id=com.dreamdogapp.android&hl=en" target="_blank"><img class="store" :src="gooogleStore"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div id="footer-bottom">
+        <div class="footer-tos">
+          <a v-link="{ path: 'tos' }">TERMS OF SERVICE</a>
+        </div>
+
+        <div class="footer-tos">
+          <a v-link="{ path: 'pp' }">PRIVACY POLICY</a>
+        </div>
+
+        <div id="footer-email">
+          <img class="email-icon" :src="emailicon"/>
+          <a href="mailto:contact@dreamdogapp.com" target="_top">contact@dreamdogapp.com</a>
+        </div>
+
+        <div id="footer-icon">
+          <div id="icons">
+            <a href="https://twitter.com/DreamDogApp" target="_blank"><img class="social-icon" :src="twit" /></a>
+            <a href="https://www.facebook.com/dreamdogapp/" target="_blank"><img class="social-icon" :src="fb" /></a>
+            <a href="https://www.instagram.com/dreamdogapp/" target="_blank"><img class="social-icon" :src="ins" /></a>
+          </div>
+            <span>Copyright@2016 Pantoscope Media Inc. </span>
+        </div>
+      </div>
     </div>
 </div>

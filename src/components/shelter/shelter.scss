@@ -9,16 +9,26 @@
     position: relative;
     padding-bottom: 0;
     //transform: translateY(-50%);
-    #main_caption{
 
+    #video-wrapper{
+      width: 80%;
+      margin: 2em auto;
+      iframe{
+        width: 80%;
+        height: 500px;
+        margin: 0 10%;
+      }
+    }
+    #main_caption{
       font-size: 3em;
+      font-weight: 300;
       text-align: center;
-      color: #1d0729;
+      color: #66087c;
       margin-bottom: 1.5em;
     }
     #main_caption_sm{
       width: 55%;
-      margin: auto;
+      margin: 30px 0 20px 30%;
       img{
         width: 100%;
       }
@@ -167,16 +177,15 @@
       margin: auto;
       margin-top: 5em;
 
-      .container{
+      #container{
 
         padding: 2em 0em;
-        padding-top: 3em;
         width: 100%;
         max-width: inherit;
         min-width: 900px;
         .one_d{
 
-          margin-top:2em;
+          margin-top:1em;
           background-color: transparent;
           display: inline-block;
           width: 22%;

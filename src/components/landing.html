@@ -7,23 +7,12 @@
           <img :src="dreamDogLogo"/>
         </div>
         <div class="main_content">
-          <b class="pur">Dogs aren't just pets, </b><span class="colr">they are family members! The</span> <b class="yel">Dream Dog App </b>
-          helps you find the perfect dog to add to your family by appearance, breed, location or shelter!
+          <b class="pur">Dogs aren't just pets, </b><span class="colr">they're family members! The</span> <b class="yel">DreamDog </b>
+          app helps you find the perfect dog to add to your family by appearance, breed, location or shelter!
         </div>
-       <validator name="validation2">
-        <form id="landing_form" v-on:submit.prevent="submitForm()"  novalidate>
-          <input v-model="landEmail" type="text" id="landing_form_email" placeholder="Email me when available for download"
-                 @valid="onValid"
-                 @invalid="onInvalid"
-                 v-validate:landEmail="['email', 'required']"><input type="submit" value="Sign up" id="landing_form_sub">
-        </form>
-       </validator>
         <div id="download">
-          <div id="cs">
-            <img :src="comingSoon" />
-          </div>
-          <div class="dow"><img :src="appStore"></div>
-          <div class="dow"><img :src="gooStore"></div>
+          <div class="dow"><a href="https://itunes.apple.com/us/app/dream-dog/id1152725638?mt=8" target="_blank"><img :src="appStore"></a></div>
+          <div class="dow"><a href="https://play.google.com/store/apps/details?id=com.dreamdogapp.android&hl=en" target="_blank"><img :src="gooStore"></a></div>
         </div>
         </div><!--
         --><div id="container_right">

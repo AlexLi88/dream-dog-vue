@@ -29,7 +29,7 @@
         if(!this.key){
           toastr.error("Your link is not correct. Please try again later.");
         }else{
-          this.$http.post('http://service.dreamdogapp.com:8080/api/account/reset_password/finish',
+          this.$http.post('http://service.dreamdogapp.com/api/account/reset_password/finish',
             {"key": self.key,
               "newPassword": self.confirmPs
             }, {
