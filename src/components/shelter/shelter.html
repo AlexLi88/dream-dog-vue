@@ -33,9 +33,12 @@
 
         <!--<div class="s_icon"></div>-->
     </div>
-    <div id="main_caption_sm">
-      <img v-if="!isPhone" :src="formDog" />
-      <img v-if="isPhone" :src="formDog2" />
+    <div id="main_caption_sm" v-if="!isPhone">
+      <img  id="caption_dog"    :src="sniff" />
+      <img  id="caption_signup" :src="formDog" />
+    </div>
+    <div id="main_caption_sm" v-if="isPhone">
+      <img  :src="formDog2" />
     </div>
     <div id="org_contact">
       <validator name="validation3">

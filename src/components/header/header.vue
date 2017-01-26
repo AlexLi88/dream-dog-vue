@@ -12,7 +12,8 @@
     template:require('./header.html'),
     data(){
       return {
-        logo: require('../../resource/home.png'),
+//        logo: require('../../resource/home.png'),
+        logo: require('../../resource/Logo_2_xrismas.png'),
         slogo: require('../../resource/dream_dog_icon.png'),
         isRegular: this.$route.path.includes('/resetpassword') || this.$route.path.includes('/confirm')  ? false : true,
         currPage:'home'

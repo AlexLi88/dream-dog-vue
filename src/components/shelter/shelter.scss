@@ -27,10 +27,21 @@
       margin-bottom: 1.5em;
     }
     #main_caption_sm{
-      width: 55%;
-      margin: 30px 0 20px 30%;
-      img{
-        width: 100%;
+      width: 70%;
+      padding-top: 90px;
+      margin: auto;
+      position: relative;
+      #caption_dog{
+        display: inline-block;
+        max-width: 250px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      #caption_signup{
+        position: absolute;
+        bottom: 5px;
+        right: 0;
       }
     }
     #org_contact{

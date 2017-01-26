@@ -186,7 +186,8 @@
               ],
 
                 backgroundImage: require('../../resource/adopt_header.png'),
-                formDog: require('../../resource/form_element.png'),
+                sniff: require('../../resource/sniffer_ilustrastion.png'),
+                formDog: require('../../resource/sign_up_long.png'),
                 formDog2: require('../../resource/sign_up.png'),
                 shelters: [
                     {

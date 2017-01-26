@@ -7,7 +7,7 @@
 
           if(this.$route.path == '/form'){
 
-            $("html, body").animate({ scrollTop: $('#shelter').position().top + $('#shelter_icon').height() + 100}, 600);
+            $("html, body").animate({ scrollTop: $('#shelter').position().top + $('#video-wrapper').height()+ $('#shelter_icon').height() + 200}, 600);
           }
 
         },
@@ -196,7 +196,8 @@
         data () {
             return {
                 emailValid: false,
-                dreamDogLogo:require('../resource/Dream_dog_logo.png'),
+//                dreamDogLogo:require('../resource/Dream_dog_logo.png'),
+                dreamDogLogo: require('../resource/Dream_dog_logo_Xrismas.png'),
                 appStore:require('../resource/app_store.png'),
                 gooStore:require('../resource/google_play.png'),
                 screenShots:require('../resource/app_mock_up.png'),
